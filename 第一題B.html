@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+    </body>
+    <script>
+        function eachWordReverse(text){
+            const eachWordArr=text.split(' ');
+            console.log(eachWordArr);
+            let finalText="";
+            for(let i in eachWordArr){
+                const spiltArr=eachWordArr[i].split('');
+                const reverseArr=spiltArr.reverse();
+                const reverseText=reverseArr.join('');
+                finalText+=`${reverseText} `;
+            }
+
+            return finalText;
+        }
+        const text="junyiacademy is abcdeee";
+        alert(eachWordReverse(text));
+
+    </script>
+</html>

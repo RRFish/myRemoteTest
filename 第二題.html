@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        請輸入數字：<input id="numberIn" type="number">
+        <button onclick="getOutput()">提交</button>
+    </body>
+    <script>
+        const numberIn=document.getElementById("numberIn");
+        const Dnum1=3;
+        const Dnum2=5;
+        const Dnum3=Dnum1*Dnum2;
+        function getOutput(){
+            const number=numberIn.value;
+            let finalOutputArr=[];
+            for(let i =1 ; i <= number ; i++ ){
+                if(i%Dnum3===0){
+                    finalOutputArr.push(i);
+                    continue;
+                }
+                else if(i%Dnum2===0){
+                    continue;
+                }
+                else if(i%(Dnum1)===0){
+                    continue;
+                }
+                
+                finalOutputArr.push(i);
+            }
+            alert(`Output:${finalOutputArr.length}`);
+        }
+    </script>
+</html>
